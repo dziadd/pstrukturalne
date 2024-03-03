@@ -1,0 +1,68 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    printf("Krystian Dobrolecki\n");
+    printf("Krystian\nDobrolecki\n");
+    printf("Krystian");
+    printf(" Dobrolecki\n");
+
+    int styczen = 31;
+    int luty = 29;
+    int marzec = 31;
+
+    int suma = styczen + luty + marzec;
+
+    printf("Suma 3msc w roku przystepnym: %d\n", suma);
+
+    int suma1 = 0;
+    for(int i = 1; i <= 10; i++) {
+        suma1 += i;
+    }
+    printf("Suma dziesieciu liczb: %d\n", suma1);
+
+    int iloczyn = 1;
+    for(int i=1; i<=10; i++){
+        iloczyn*=i;
+    }
+    printf("Iloczyn dziesieciu liczb: %d\n", iloczyn);
+
+    double saldo = 1000.0;
+    double oprocentowanie = 0.06;
+    int rok;
+
+    for (rok = 1; rok <= 3; rok++) {
+        saldo += saldo * oprocentowanie;
+        printf("Saldo po %d roku wynosi %.2f \n", rok, saldo);
+    }
+
+    printf("+----------------+\n");
+    printf("|                |\n");
+    printf("|  Kocham piwko  |\n");
+    printf("|                |\n");
+    printf("+----------------+\n");
+
+    printf("   /////\n");
+    printf("  +\"\"\"\"\"+\n");
+    printf(" (| o o |)\n");
+    printf("   | ^ |\n");
+    printf("  | '-' |\n");
+    printf("  +-----+\n");
+
+
+    printf("*    *                                                                       \n");
+    printf("*   *                                                               \n");
+    printf("*  *      *****   *      *   *******     *       *      *****     * ***       \n");
+    printf("* *      *     *   *    *   *            *                   *    **    *       \n");
+    printf("**       *     *    *  *    *          *****     *           *    *     * \n");
+    printf("* *      ******      **      ******      *       *      ******    *     *       \n");
+    printf("*  *     * *         *             *     *       *     *     *    *     *         \n");
+    printf("*   *    *   *      *              *     * *     * *   *    **    *     *          \n");
+    printf("*    *   *     *   *        *******      **      **      *** *    *     *     \n");
+
+
+    return 0;
+
+
+}
