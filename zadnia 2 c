@@ -17,3 +17,40 @@ int main(void) {
     scanf("%lf", &x);
     printf("%d", sgn(x));
     return 0;
+
+
+///////////////////////////////////////////
+
+
+
+#include <stdio.h>
+
+double najmniejsza(double x, double y, double z) {
+    if (x < y && x < z) {
+        printf("Najmniejsza liczba to: ");
+        return x;
+    } else if (y < x && y < z) {
+        printf("Najmniejsza liczba to: ");
+        return y;
+    } else if (z < x && z < y) {
+        printf("Najmniejsza liczba to: ");
+        return z;
+    }
+    else{
+        printf("Wszystkie liczby sa rowne ");
+        return 0;
+    }
+}
+int main(void) {
+    double x;
+    double y;
+    double z;
+
+    printf("Podaj liczby x: ");
+    scanf("%lf", &x);
+    scanf("%lf", &y);
+    scanf("%lf", &z);
+    printf ("%lf", najmniejsza(x,y,z));
+    return 0;
+
+}
