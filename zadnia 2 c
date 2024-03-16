@@ -54,3 +54,26 @@ int main(void) {
     return 0;
 
 }
+
+///////////////////////////////////////////////////////////
+#include <stdio.h>
+
+double srednia(double x, double y, double z) {
+        printf("srednia z liczb: ");
+        return (x+y+z)/3;
+
+}
+int main(void) {
+    double x;
+    double y;
+    double z;
+
+    printf("Podaj liczby x: ");
+    scanf("%lf", &x);
+    scanf("%lf", &y);
+    scanf("%lf", &z);
+    printf ("%lf", srednia(x,y,z));
+    return 0;
+
+}
+
