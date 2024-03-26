@@ -1,4 +1,6 @@
 #include <stdio.h>
+#include <math.h>
+#include <stdbool.h>
 
 int sgn(double x){
     if(x>0){
@@ -11,19 +13,16 @@ int sgn(double x){
         return 0;
     }
 }
-int main(void) {
+int a(void) {
     double x;
     printf("Podaj liczbe0 x: ");
     scanf("%lf", &x);
     printf("%d", sgn(x));
     return 0;
-
-
-///////////////////////////////////////////
+}
 
 
 
-#include <stdio.h>
 
 double najmniejsza(double x, double y, double z) {
     if (x < y && x < z) {
@@ -41,7 +40,7 @@ double najmniejsza(double x, double y, double z) {
         return 0;
     }
 }
-int main(void) {
+int b(void) {
     double x;
     double y;
     double z;
@@ -55,15 +54,13 @@ int main(void) {
 
 }
 
-///////////////////////////////////////////////////////////
-#include <stdio.h>
 
 double srednia(double x, double y, double z) {
         printf("srednia z liczb: ");
         return (x+y+z)/3;
 
 }
-int main(void) {
+int c(void) {
     double x;
     double y;
     double z;
@@ -77,3 +74,159 @@ int main(void) {
 
 }
 
+
+double potega(double x, int n) {
+    double wynik = 1.0;
+    for(int i = 0; i < n; i++) {
+        wynik *= x;
+    }
+    return wynik;
+}
+
+int e(void) {
+    double x = 2.0;
+    int n = 3;
+    printf("Wynik: %f\n", potega(x, n));
+    return 0;
+}
+
+
+
+int pierwsza_cyfra(int n) {
+    while (n >= 10)
+        n /= 10;
+    return n;
+}
+
+
+int ostatnia_cyfra(int n) {
+    return n % 10;
+}
+
+
+int ile_cyfr(int n) {
+    return floor(log10(n) + 1);
+}
+
+int f(void) {
+    int liczba;
+    printf("Wprowadź liczbe: ");
+    scanf("%d", &liczba);
+    printf("Pierwsza cyfra: %d\n", pierwsza_cyfra(liczba));
+    printf("Ostatnia cyfra: %d\n", ostatnia_cyfra(liczba));
+    printf("Ile cyfr: %d\n", ile_cyfr(liczba));
+    return 0;
+}
+
+double obliczStanKonta(double stanPoczatkowy, double stopaProcentowa, int liczbaLat) {
+    for(int i = 0; i < liczbaLat; i++) {
+        stanPoczatkowy += stanPoczatkowy * stopaProcentowa;
+    }
+    return stanPoczatkowy;
+}
+
+int g(void) {
+    double stanPoczatkowy = 1000.0;
+    double stopaProcentowa = 0.05;
+    int liczbaLat = 10;
+
+    double stanKoncowy = obliczStanKonta(stanPoczatkowy, stopaProcentowa, liczbaLat);
+    printf("Stan konta po %d latach wynosi: %.2f\n", liczbaLat, stanKoncowy);
+
+    return 0;
+}
+
+
+int gcd(int a, int b) {
+    if (b == 0)
+        return a;
+    return gcd(b, a % b);
+}
+
+void mniejszepierwsze(int n) {
+    for (int i = 1; i < n; i++) {
+        if (gcd(i, n) == 1)
+            printf("%d ", i);
+    }
+    printf("\n");
+}
+
+int h(void) {
+    int n;
+    scanf("%d", &n);
+    mniejszepierwsze(n);
+    return 0;
+}
+
+int perfekt(int num) {
+    int sum = 0;
+    for (int i = 1; i <= num / 2; i++) {
+        if (num % i == 0)
+            sum += i;
+    }
+    return sum == num;
+}
+
+void perfektmniejsza(int n) {
+    for (int i = 1; i < n; i++) {
+        if (perfekt(i))
+            printf("%d ", i);
+    }
+    printf("\n");
+}
+
+int i(void) {
+    int n;
+    scanf("%d", &n);
+    perfektmniejsza(n);
+    return 0;
+}
+
+
+
+int main(){
+    int wybor;
+    printf("Wybierz numer funkcji do uruchomienia:\n");
+    printf("1. a()\n");
+    printf("2. b()\n");
+    printf("3. c()\n");
+    printf("4. e()\n");
+    printf("5. f()\n");
+    printf("6. g()\n");
+    printf("7. h()\n");
+    printf("8. i()\n");
+    printf("Wybor: ");
+    scanf("%d", &wybor);
+
+    switch(wybor) {
+        case 1:
+            a();
+            break;
+        case 2:
+            b();
+            break;
+        case 3:
+            c();
+            break;
+        case 4:
+            e();
+            break;
+        case 5:
+            f();
+            break;
+        case 6:
+            g();
+            break;
+        case 7:
+            h();
+            break;
+        case 8:
+            i();
+            break;
+        default:
+            printf("Nieznany wybor.\n");
+            break;
+    }
+
+    return 0;
+}
