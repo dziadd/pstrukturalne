@@ -1,0 +1,87 @@
+#include <stdio.h>
+#include <ctype.h>
+
+//int main() {
+//    printf("Wprowadz tekst: ");
+//    int c;
+//    while ((c = getchar()) != '\n' && c != EOF) {
+//        if (islower(c))
+//            putchar(toupper(c));
+//        else if (isupper(c))
+//            putchar(tolower(c));
+//        else
+//            putchar(c);
+//    }
+//    return 0;
+//}
+
+
+#include <stdio.h>
+#include <ctype.h>
+
+//int main() {
+//    int mala_litera = 0, duza_litera = 0, cyfra = 0;
+//    char c;
+//
+//    printf("Wprowadz tekst: ");
+//
+//    while ((c = getchar()) != '\n') {
+//        if (islower(c))
+//            mala_litera++;
+//        else if (isupper(c))
+//            duza_litera++;
+//        else if (isdigit(c))
+//            cyfra++;
+//    }
+//
+//    printf("Male litery: %d\n", mala_litera);
+//    printf("Duze litery: %d\n", duza_litera);
+//    printf("Cyfry: %d\n", cyfra);
+//
+//    return 0;
+//}
+
+
+
+
+//int main() {
+//    int c;
+//    while ((c = getchar()) != EOF) {
+//        if (c == '\t') {
+//            printf("    ");
+//        } else {
+//            putchar(c);
+//        }
+//    }
+//    return 0;
+//}
+
+
+//int main() {
+//    int c;
+//    while ((c = getchar()) != EOF) {
+//        putchar(c);
+//        putchar(c);
+//    }
+//    return 0;
+//}
+
+
+//int main() {
+//    char c;
+//    while ((c = getchar()) != EOF) {
+//        printf("%d ", c);
+//    }
+//    return 0;
+//}
+
+
+
+
+
+
+
+//gcc main.c -o char_to_code
+
+
+
