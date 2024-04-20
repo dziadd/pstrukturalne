@@ -1,0 +1,163 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    printf("Krystian Dobrolecki\n");
+    printf("Krystian\nDobrolecki\n");
+    printf("Krystian");
+    printf(" Dobrolecki\n");
+
+    int styczen = 31;
+    int luty = 29;
+    int marzec = 31;
+
+    int suma = styczen + luty + marzec;
+
+    printf("Suma 3msc w roku przystepnym: %d\n", suma);
+
+    int suma1 = 0;
+    for(int i = 1; i <= 10; i++)
+    {
+        suma1 += i;
+    }
+    printf("Suma dziesieciu liczb: %d\n", suma1);
+
+    int iloczyn = 1;
+    for(int i=1; i<=10; i++)
+    {
+        iloczyn*=i;
+    }
+    printf("Iloczyn dziesieciu liczb: %d\n", iloczyn);
+
+    double saldo = 1000.0;
+    double oprocentowanie = 0.06;
+    int rok;
+
+    for (rok = 1; rok <= 3; rok++)
+    {
+        saldo += saldo * oprocentowanie;
+        printf("Saldo po %d roku wynosi %.2f \n", rok, saldo);
+    }
+
+    printf("+----------------+\n");
+    printf("|                |\n");
+    printf("|  Kocham piwko  |\n");
+    printf("|                |\n");
+    printf("+----------------+\n");
+    printf("\n");
+
+    printf("   /////\n");
+    printf("  +\"\"\"\"\"+\n");
+    printf(" (| o o |)\n");
+    printf("   | ^ |\n");
+    printf("  | '-' |\n");
+    printf("  +-----+\n");
+    printf("\n");
+
+
+    printf("*    *                                                                       \n");
+    printf("*   *                                                               \n");
+    printf("*  *      *****   *      *   *******     *       *      *****     * ***       \n");
+    printf("* *      *     *   *    *   *            *                   *    **    *       \n");
+    printf("**       *     *    *  *    *          *****     *           *    *     * \n");
+    printf("* *      ******      **      ******      *       *      ******    *     *       \n");
+    printf("*  *     * *         *             *     *       *     *     *    *     *         \n");
+    printf("*   *    *   *      *              *     * *     * *   *    **    *     *          \n");
+    printf("*    *   *     *   *        *******      **      **      *** *    *     *     \n");
+    printf("\n");
+
+    printf("   +\n");
+    printf("  + +\n");
+    printf(" +   +\n");
+    printf("+-----+\n");
+    printf("| .-. |\n");
+    printf("| | | |\n");
+    printf("+-+-+-+\n");
+    printf("\n");
+
+    printf(" @___@       ------           \n");
+    printf("{ o o }    / Hello  \        \n");
+    printf("(  3  )   <  Junior  |               \n");
+    printf(" | | |     \ Coder! /                   \n");
+    printf("(__||__)     ------         \n");
+    printf("\n");
+
+    printf("Ulubione filmy i seriale:\n");
+    printf("The walking Dead\n");
+    printf("Psy\n");
+    printf("Chlopaki z barakow\n");
+    printf("\n");
+
+
+
+    printf("Raz Mozarta bawiacego w Pradze obsypaly z kominka sadze.\n");
+    printf("Fakt, ze potem, w ciagu pol godziny, wymorusal az cztery hrabiny,\n");
+    printf("jakos uszedl biografow uwadze.\n");
+    printf("\n");
+
+
+    int i, j;
+    for(i = 0; i < 5; i++) {
+        for(j = 0; j < 20; j++) {
+            if(j < 10) {
+                if((i + j) % 2 == 0) {
+                    printf("*");
+                } else {
+                    printf(" ");
+                }
+            } else {
+                printf("=");
+            }
+        }
+        printf("\n");
+    }
+
+    for(i = 0; i < 5; i++) {
+        for(j = 0; j < 20; j++) {
+            printf("=");
+        }
+        printf("\n");
+    }
+
+
+
+    printf("\n");
+    double liczba;
+    printf("Podaj liczbe zmiennoprzecinkowa: ");
+    scanf("%lf", &liczba);
+
+    liczba = fabs(liczba);
+
+    printf("Wartosc bezwzgledna tej liczby to: %.2lf\n", liczba);
+
+
+
+
+
+    double a, b, wynik;
+
+    printf("Podaj pierwsza liczbe: ");
+    scanf("%lf", &a);
+
+    printf("Podaj druga liczbe: ");
+    scanf("%lf", &b);
+
+    if(b != 0) {
+        wynik = a / b;
+        printf("Wynik dzielenia: %.2lf\n", wynik);
+    } else {
+        printf("Nie mozna dzielic przez zero!\n");
+    }
+
+
+
+
+
+
+
+
+    return 0;
+
+
+}
